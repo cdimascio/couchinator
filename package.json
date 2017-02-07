@@ -1,0 +1,12 @@
+{
+  "name": "cloudant-database-generator",
+  "version": "1.0.0",
+  "description": "Generate and version control cloudant databases",
+  "main": "index.js",
+  "author": "Carmine M DiMascio",
+  "repository": "https://github.com/cdimascio/cloudant-database-generator",
+  "license": "MIT",
+  "dependencies": {
+    "cloudant": "^1.7.1"
+  }
+}
