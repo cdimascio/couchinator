@@ -1,7 +1,7 @@
  
 const program = require('commander');
-const Generator = require('../index.js');
 const path = require('path');
+const Generator = require('../lib');
 
 const DEFAULT_PATH = 'cloudant-database';
 const required = (val, name) => {
@@ -31,10 +31,17 @@ program.parse(process.argv);
 
 validate();
 
+
+const rpath = program.path 
+  ? path.isAbsolute(program.path) 
+    ? program.path 
+    : path.join(process.cwd(), program.path) 
+  : path.join(process.cwd(), DEFAULT_PATH);
+
 main({
   command,
   url: program.url,
-  path: program.path || DEFAULT_PATH
+  path: rpath
 });
 
 
