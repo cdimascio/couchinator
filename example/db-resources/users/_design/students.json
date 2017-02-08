@@ -1,0 +1,9 @@
+{
+  "_id": "_design/students",
+  "views": {
+    "byId": {
+      "map": "function (doc) {  if (doc.type === 'student') emit(doc._id, doc);}"
+    }
+  },
+  "language": "javascript"
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "_design/districts",
+  "_rev": "1-33da8297e86590fb0d86aa6d28eb65d2",
+  "views": {
+    "byId": {
+      "map": "function (doc) {  if (doc.type === 'district') emit(doc._id, doc);}"
+    }
+  },
+  "language": "javascript"
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "_design/teachers",
+  "views": {
+    "byId": {
+      "map": "function (doc) {  if (doc.type === 'teacher') emit(doc._id, doc);}"
+    }
+  },
+  "language": "javascript"
+}

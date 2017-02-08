@@ -7,6 +7,7 @@
   "repository": "https://github.com/cdimascio/cloudant-database-generator",
   "license": "MIT",
   "dependencies": {
-    "cloudant": "^1.7.1"
+    "cloudant": "^1.7.1",
+    "commander": "^2.9.0"
   }
 }
