@@ -7,7 +7,7 @@
   "repository": "https://github.com/cdimascio/cloudant-database-generator",
   "license": "Apache-2.0",
   "bin": {
-    "bunyan": "./bin/cloudant-database-generator"
+    "cloudant-database-generator": "./bin/cloudant-database-generator"
   },
   "dependencies": {
     "cloudant": "^1.7.1",
