@@ -5,13 +5,12 @@
   "main": "lib/index.js",
   "author": "Carmine M DiMascio",
   "repository": "https://github.com/cdimascio/cloudant-database-generator.js",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
   "bin": {
     "cloudant-database-generator": "bin/cloudant-database-generator"
   },
   "dependencies": {
     "cloudant": "^1.7.1",
-    "commander": "^2.9.0",
-    "left-pad": "^1.1.3"
+    "commander": "^2.9.0"
   }
 }

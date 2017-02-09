@@ -4,3 +4,4 @@ node_modules
 .history
 test.js
 cloudant-database
+npm-debug.log
