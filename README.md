@@ -17,10 +17,12 @@ Global installation is convenient when using the **CLI**
 
 ### CLI
 
-- create dbs
+create dbs:
+
 ```cloudant-database-generator.js create --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
 
-- destroy dbs
+destroy dbs:
+
 ```cloudant-database-generator.js destroy --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
 
 **Note:** `RESOURCE_PATH` may be absolute or relative to the current working directy
