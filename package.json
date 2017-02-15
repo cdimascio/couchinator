@@ -1,6 +1,6 @@
 {
   "name": "cloudant-database-generator",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "description": "Auto Generate and destroy cloudant databases",
   "main": "lib/index.js",
   "author": "Carmine M DiMascio",
