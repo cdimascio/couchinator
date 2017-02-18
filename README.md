@@ -1,17 +1,17 @@
-#cloudant-database-generator
+#couchinator
 
 Generate (or destroy) cloudant databases using a simple on disk file structure.
 
-cloudant-database-generator provides both a module and a cli, thus enabling you to use the generator directly within your app or from the command line.
+couchinator provides both a module and a cli, thus enabling you to use the generator directly within your app or from the command line.
 
 
 ## Install
 
-`npm install cloudant-database-generator`
+`npm install couchinator`
 
 Global installation is convenient when using the **CLI**
 
-`npm install cloudant-database-generator -g`
+`npm install couchinator -g`
 
 ## Usage
 
@@ -19,11 +19,11 @@ Global installation is convenient when using the **CLI**
 
 create dbs:
 
-```cloudant-database-generator.js create --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
+```couchinator.js create --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
 
 destroy dbs:
 
-```cloudant-database-generator.js destroy --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
+```couchinator.js destroy --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
 
 **Note:** `RESOURCE_PATH` may be absolute or relative to the current working directy
 
@@ -176,8 +176,8 @@ new Generator({account:me, password:password})
 Currently, the CLI only support a Cloudant URL.
 
 ```shell
-> cloudant-database-generator
-  Usage: cloudant-database-generator [command] [options]
+> couchinator
+  Usage: couchinator [command] [options]
 
 
   Commands:

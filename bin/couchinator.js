@@ -24,10 +24,10 @@ program
   .action(cmd => command = 'destroy')
 
 program
-  .option('-u --url <url>', 'Cloudant database url')
-  .option('-p --path <path>', 'Resource path. Default ./' + DEFAULT_PATH)
-  .option('-b --verbose', 'Verbose logs', false)
-  .option('-d --designonly', 'Import design docs only. Do no import other docs ', false)
+  .option('-u --url <url>', 'couchdb url')
+  .option('-p --path <path>', 'resource path. Default ./' + DEFAULT_PATH)
+  .option('-b --verbose', 'verbose logs', false)
+  .option('-d --ddocsonly', 'import design docs only. Do no import other docs ', false)
 
 
 program.parse(process.argv);
