@@ -1,6 +1,6 @@
 #couchinator
 
-Create and destroy cloudant databases with ease. **couchinator** is great tool for unit testing and more. couchinator is both a library and a command line utility. 
+Create and destroy cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility. 
 
 You represent your database(s), couchinator takes care of the rest.
 
@@ -63,7 +63,7 @@ new Generator(url, progressVisitor)
 ```
 
 ## Behaviors
-Currently, there are two command:
+Currently, there are two commands:
 
 - **`couchinator create`**
 
@@ -99,7 +99,7 @@ Represent your database(s) on the file system, then **couchinator** uses this re
 ### The Details
 
 1. Create a folder (`RESOURCE_PATH`) to contain your database representation.
-2. Within this folder, create a folder for each database. We'll refer each of these as a `db_folder`
+2. Within this folder, create a folder for each database. We will refer to each of these as a `db_folder`
     
     Each `db_folder` name is used as the database name.
 
@@ -152,7 +152,7 @@ To run the the example:
 
 - clone this repo
 - `cd examples`
-- edit exmaples.js and set `<CLOUDANT-URL>` to your cloudant url
+- edit examples.js and set `<CLOUDANT-URL>` to your cloudant url
 - Run `node example`
 - Your database should now contain documents
 
