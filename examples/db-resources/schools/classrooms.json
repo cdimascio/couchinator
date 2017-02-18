@@ -1,0 +1,45 @@
+{
+  "docs": [
+    {
+      "name": "Mr J.'s Math class",
+      "teacher": {
+        "id": "mrjensen12345",
+        "name": "Mr. Jensen"
+      },
+      "students": [
+        {
+          "id": "sam895454857",
+          "name": "Sam C.",
+          "type": "student"
+        },
+        {
+          "id": "josie895454856",
+          "name": "Josie D.",
+          "type": "student"
+        }
+      ],
+      "grade": "K",
+      "type": "classroom"
+    },
+    {
+      "name": "Rocket Science for toddlers",
+      "teacher": {
+        "id": "msscott12345",
+        "name": "Ms. Scott"
+      },
+      "students": [
+        {
+          "id": "sam895454857",
+          "name": "Sam C.",
+          "type": "student"
+        },
+        {
+          "id": "josie895454856",
+          "name": "Josie D.",
+          "type": "student"
+        }
+      ],
+      "type": "classroom"
+    }
+  ]
+}

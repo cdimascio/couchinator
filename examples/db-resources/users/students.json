@@ -1,0 +1,14 @@
+{
+  "docs": [
+    {
+      "_id": "sam895454857",
+      "name": "Sam C.",
+      "type": "student"
+    },
+    {
+      "_id": "josie895454856",
+      "name": "Josie D.",
+      "type": "student"
+    }
+  ]
+}

@@ -4,9 +4,6 @@
     "byId": {
       "map": "function (doc) {\n  if (doc.type === 'classroom') {\n    emit(doc._id, doc);\n  }\n}"
     },
-    "bySchoolId": {
-      "map": "function (doc) {\n  if (doc.type === 'classroom') {\n    emit(doc.school._id, doc);\n  }\n}"
-    },
     "byTeacherId": {
       "map": "function (doc) {\n  if (doc.type === 'classroom') {\n    emit(doc.teacher._id, doc);\n  }\n}"
     }

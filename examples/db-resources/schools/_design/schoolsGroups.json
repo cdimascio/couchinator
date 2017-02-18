@@ -1,9 +1,0 @@
-{
-  "_id": "_design/schoolGroups",
-  "views": {
-    "byId": {
-      "map": "function (doc) {  if (doc.type === 'schoolGroup') emit(doc._id, doc);}"
-    }
-  },
-  "language": "javascript"
-}

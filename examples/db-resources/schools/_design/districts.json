@@ -1,9 +1,0 @@
-{
-  "_id": "_design/districts",
-  "views": {
-    "byId": {
-      "map": "function (doc) {  if (doc.type === 'district') emit(doc._id, doc);}"
-    }
-  },
-  "language": "javascript"
-}
