@@ -1,7 +1,7 @@
 {
   "name": "couchinator",
-  "version": "0.9.10",
-  "description": "Auto create and destroy cloudant databases",
+  "version": "0.10.1",
+  "description": "Create and destroy couchdb and cloudant databases with ease",
   "main": "lib/index.js",
   "author": "Carmine M DiMascio",
   "repository": "https://github.com/cdimascio/couchinator",

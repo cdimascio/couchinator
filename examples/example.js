@@ -15,4 +15,6 @@ const assetPath = path.join(process.cwd(), 'db-resources')
 
 new Couchinator(url, progressVisitor)
     .resources(assetPath)
-    .create(); // or destroy()
+    .create(); 
+    // or .destroy()
+    // or create({designDocsOnly: true})
