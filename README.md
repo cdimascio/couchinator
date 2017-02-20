@@ -5,8 +5,11 @@ Create and destroy cloudant databases with ease. **couchinator** is a great tool
 You represent your database(s), couchinator takes care of the rest.
 
 See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
-![](https://github.com/cdimascio/couchinator/raw/master/assets/data-layout.png)
 
+<p align="center">
+
+<img src="https://github.com/cdimascio/couchinator/raw/master/assets/data-layout.png" width="219>
+</p>
 
 
 ## Install
