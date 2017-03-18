@@ -3,7 +3,7 @@
 const program = require('commander');
 const path = require('path');
 const Generator = require('../lib');
-
+const package = require('../package.json')
 const DEFAULT_PATH = 'cloudant-database';
 const required = (val, name) => {
   if (!val) {
@@ -13,7 +13,7 @@ const required = (val, name) => {
 }
 let command;
 program
-  .version('0.0.1')
+  .version(package.version)
 
 program
   .command('create')
@@ -22,6 +22,10 @@ program
 program
   .command('destroy')
   .action(cmd => command = 'destroy')
+
+program
+  .command('recreate')
+  .action(cmd => command = 'recreate')
 
 program
   .option('-u --url <url>', 'couchdb url')
@@ -74,7 +78,10 @@ function main(opts) {
       generator.resources(rpath).create(allDocs);
       break;  
     case 'destroy':
-      const c = generator.resources(rpath).destroy()
+      generator.resources(rpath).destroy()
+      break;
+    case 'recreate':
+      generator.resources(rpath).recreate(allDocs);
       break;
     default:
       exit('Invalid command.');

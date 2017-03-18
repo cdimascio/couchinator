@@ -74,6 +74,9 @@ Currently, there are two commands:
 
     destroys all databases represented in the [data layout](#data-layout).
 
+- **`couchinator rcreate`**
+    Calls destroy followed by create. 
+
 See [CLI Usage](#cli-usage) section for additional arguments.
 
 ## Data Layout
@@ -229,7 +232,8 @@ Currently, the CLI only support a Cloudant URL.
 
   Commands:
 
-    create  
+    create
+    recreate
     destroy 
 
   Options:
