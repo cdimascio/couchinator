@@ -1,28 +1,50 @@
-#couchinator
+# couchinator
+
+Fixtures for Cloudant. 
+
+![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Create and destroy cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility. 
 
 You represent your database(s), couchinator takes care of the rest.
 
 See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
+
 ![](https://github.com/cdimascio/couchinator/raw/master/assets/data-layout.png)
 
 
 ## Install
 
-`npm install couchinator`
+```shell
+npm install couchinator
+```
 
 Global installation is convenient when using the **CLI**
 
-`npm install couchinator -g`
+```
+npm install couchinator -g
+```
 
 
 ## Use the CLI
 
+#### Create
 
-```couchinator.js create --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
+```shell
+couchinator create --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>
+```
 
-```couchinator.js destroy --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>```
+#### Destroy
+
+```shell
+couchinator destroy --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>
+```
+
+#### Recreate
+
+```shell
+couchinator recreate --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>
+```
 
 **Note:** `RESOURCE_PATH` may be absolute path or a path relative to the current working directy
 

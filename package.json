@@ -1,13 +1,14 @@
 {
   "name": "couchinator",
   "version": "0.11.1",
-  "description": "Create and destroy couchdb and cloudant databases with ease",
+  "description": "Fixtures for Cloudant: Create and destroy cloudant databases with ease",
   "main": "lib/index.js",
   "author": "Carmine M DiMascio",
   "repository": "https://github.com/cdimascio/couchinator",
   "license": "Apache-2.0",
   "keywords": [
     "couchdb",
+    "fixtures",
     "cloudant",
     "setup",
     "teardown",
