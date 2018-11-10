@@ -1,16 +1,19 @@
 # couchinator
 
-Fixtures for Cloudant.
-
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create and destroy cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
+Fixtures for Cloudant.
+
+Setup ad teardown cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
+<p align="center">
+	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="650"/>
+</p>
 
 You represent your database(s), couchinator takes care of the rest.
 
 See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
 
-![](https://github.com/cdimascio/couchinator/raw/master/assets/data-layout.png)
+
 
 ## Install
 
@@ -97,6 +100,7 @@ See [CLI Usage](#cli-usage) section for additional arguments.
 
 ## Data Layout
 
+
 ### Getting Started
 
 Represent your database(s) on the file system, then **couchinator** uses this representation to create, update, and destroy your database(s) on demand.
@@ -113,6 +117,7 @@ Represent your database(s) on the file system, then **couchinator** uses this re
     	classrooms.json
 	classrooms-docs.json
 ```
+
 
 ### The Details
 
