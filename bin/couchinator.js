@@ -5,12 +5,7 @@ const path = require('path');
 const Generator = require('../lib');
 const package = require('../package.json');
 const DEFAULT_PATH = 'cloudant-database';
-const required = (val, name) => {
-  if (!val) {
-    console.error(`${name} required.`);
-    process.exit(1);
-  }
-};
+
 let command;
 program.version(package.version);
 
@@ -40,7 +35,6 @@ const rpath = program.path
     : path.join(process.cwd(), program.path)
   : path.join(process.cwd(), DEFAULT_PATH);
 
-console.log;
 main({
   command,
   url: program.url,
@@ -100,8 +94,8 @@ function validate() {
 
 function exit(msg) {
   if (msg) {
-    console.error('  Error: ' + msg);
+    console.error('Error: ' + msg + '\n');
   }
-  program.help();
+  program.outputHelp();
   process.exit(1);
 }
