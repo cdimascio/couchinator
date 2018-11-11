@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Fixtures for Cloudant.
+Fixtures for CouchDB and IBM Cloudant.
 
 Setup ad teardown cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
 <p align="center">
@@ -53,10 +53,12 @@ couchinator recreate --url <YOUR-CLOUDANT-URL> --path <RESOURCE_PATH>
 
 #### Basic Usage
 
+CouchDB
 ```javascript
 const Couchinator = require('couchinator');
-new Couchinator('<CLOUDANT-URL>').resources('db-resources').create(); // or destroy()
+new Couchinator('http://127.0.0.1:5984').resources('./db-resources').create(); // or destroy()
 ```
+
 
 #### Advanced Usage
 
