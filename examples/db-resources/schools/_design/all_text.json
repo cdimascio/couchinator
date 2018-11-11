@@ -1,0 +1,19 @@
+{
+  "_id": "_design/all_text",
+  "language": "query",
+  "indexes": {
+    "all-text": {
+      "index": {
+        "default_analyzer": "keyword",
+        "default_field": {
+          "enabled": false
+        },
+        "partial_filter_selector": {},
+        "selector": {},
+        "fields": "all_fields",
+        "index_array_lengths": false
+      },
+      "analyzer": "keyword"
+    }
+  }
+}
