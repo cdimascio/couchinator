@@ -26,6 +26,8 @@ See the [Data Layout](#data-layout) section for information on how to represent 
 npm install couchinator
 ```
 
+If you're a Java user, try [this](https://github.com/cdimascio/couchinator-java-wrapper)
+
 Global installation is convenient when using the **CLI**
 
 ```
