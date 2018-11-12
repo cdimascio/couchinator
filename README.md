@@ -2,18 +2,18 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<img align="left" src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="350"/>
+<img align="left" src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="425"/>
 
 <BR>Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).<br><br>Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
 
+Represent your database(s) as a set of folders and files, couchinator takes care of the rest.
+
+See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
 <p align="center">
 	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator-anim.gif"/>
 </p>
 
 
-Represent your database(s) as a set of folders and files, couchinator takes care of the rest.
-
-See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
 
 ## Install
 
