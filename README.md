@@ -72,25 +72,6 @@ couchinator.destroy();
 
 see [Advanced Usage](#advanced-usage) for more library customization options
 
-## Apis
-
-Currently, there are two commands:
-
-- **`couchinator create`**
-
-  Creates all databases, design documents, and executes any bulk documents represented in the [data layout](#data-layout). If a design document exists, the design document is updated to reflect the version currently represented in the [data layout](#data-layout).
-
-  Using the `--ddocsonly` flag skips any bulk documents. This flag is particulary useful when you simply want to add/update design documents.
-
-- **`couchinator destroy`**
-
-  destroys all databases represented in the [data layout](#data-layout).
-
-- **`couchinator rcreate`**
-  Calls destroy followed by create.
-
-See [CLI Usage](#cli-usage) section for additional arguments.
-
 ## Data Layout
 
 The following sections describe how to create a data layout.
@@ -267,6 +248,23 @@ const assetPath = path.join(process.cwd(), 'db-resources');
 
 new Generator(url, progressVisitor).resources(assetPath).create(); // or destroy
 ```
+
+## Apis
+
+- **`couchinator create`**
+
+  Creates all databases, design documents, and executes any bulk documents represented in the [data layout](#data-layout). If a design document exists, the design document is updated to reflect the version currently represented in the [data layout](#data-layout).
+
+  Using the `--ddocsonly` flag skips any bulk documents. This flag is particulary useful when you simply want to add/update design documents.
+
+- **`couchinator destroy`**
+
+  destroys all databases represented in the [data layout](#data-layout).
+
+- **`couchinator rcreate`**
+  Calls destroy followed by create.
+
+See [CLI Usage](#cli-usage) section for additional arguments.
 
 ## CLI Usage
 
