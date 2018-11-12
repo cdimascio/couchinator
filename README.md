@@ -105,13 +105,13 @@ A couchinator filesystem data layout might look as such:
 
 
 ```shell
-schools
+users
     _design
         students.json
-	teachers.json
+	 teachers.json
     students-docs.json
     teachers-docs.json
-users
+classrooms
     _design
         classrooms.json
         classrooms-docs.json
@@ -119,22 +119,22 @@ users
 
 ### Create a data layout representing 2 databases
 
-Let's create a data layout to describe two databases **schools** and **users**
+Let's create a data layout to describe two databases **users** and **classrooms**
 
-1. **Create two folders, one for `schools` and another for `users`.**
+1. **Create two folders, one for `users` and another for `classrooms`.**
 
 	```shell
-	schools/
 	users/
+	classrooms/
 	```
 	**Note:** Couchinator will use the folder name as the database name
 
 2. **Within each folder _optionally_ create a `_design` folder to store any design documents**
 
 	```shell
-	schools/
-	    _design/
 	users/
+	    _design/
+	classrooms/
 	    _design/
 	```
 
@@ -143,11 +143,11 @@ Let's create a data layout to describe two databases **schools** and **users**
    In the example below, we create two design documents in the `schools` database and one in the `users` database.
 
 	```shell
-	schools/
+	users/
 	    _design/
 	        students.json
 	        teachers.json
-	users/
+	classrooms/
 	    _design/
 	        classrooms.json
 	```
@@ -172,6 +172,20 @@ Let's create a data layout to describe two databases **schools** and **users**
 
 	- Data must be stored using CouchDB's [bulk document](http://docs.couchdb.org/en/2.0.0/json-structure.html#bulk-documents) format
 	- The data may be stored in a _single_ JSON file or spread across _multiple_ JSON files (useful for organizing data)
+
+	```shell
+	users/
+	    _design/
+	        students.json
+	        teachers.json
+	    students-docs.json   # contains student data
+	    teachers-docs.json   # contains teacher data
+	
+	classrooms/
+	    _design/
+	        classrooms.json
+	    users-docs.json
+	```
 	
 
    For example, `student-docs.json` contains students
