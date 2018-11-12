@@ -106,15 +106,15 @@ A couchinator filesystem data layout might look as such:
 
 ```shell
 schools
-	_design
-		students.json
-		teachers.json
-	students-docs.json
-	teachers-docs.json
+    _design
+        students.json
+	teachers.json
+    students-docs.json
+    teachers-docs.json
 users
-	_design
-		classrooms.json
-	classrooms-docs.json
+    _design
+        classrooms.json
+        classrooms-docs.json
 ```
 
 ### Create a data layout representing 2 databases
@@ -133,9 +133,9 @@ Let's create a data layout to describe two databases **schools** and **users**
 
 	```shell
 	schools/
-		_design/
+	    _design/
 	users/
-		_design/
+	    _design/
 	```
 
 3. **Create design document(s) and store them in the appropriate `_design` folder**
@@ -144,12 +144,12 @@ Let's create a data layout to describe two databases **schools** and **users**
 
 	```shell
 	schools/
-		_design/
-			students.json
-			teachers.json
+	    _design/
+	        students.json
+	        teachers.json
 	users/
-		_design/
-			classrooms.json
+	    _design/
+	        classrooms.json
 	```
 
 	The contents of each design document `.json` must be a valid CouchDB [design document]([design document](http://docs.couchdb.org/en/2.0.0/json-structure.html#design-document)).
