@@ -5,6 +5,11 @@
 Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).
 
 Setup ad teardown cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
+
+<p align="center">
+	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator-animation.gif" width="650"/>
+</p>
+
 <p align="center">
 	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="650"/>
 </p>
@@ -12,8 +17,6 @@ Setup ad teardown cloudant databases with ease. **couchinator** is a great tool 
 Represent your database(s) as a set of folders and files, couchinator takes care of the rest.
 
 See the [Data Layout](#data-layout) section for information on how to represent your database with couchinator.
-
-
 
 ## Install
 
@@ -51,18 +54,18 @@ couchinator destroy --url <COUCHDB-OR-CLOUDANT-URL> --path <RESOURCE_PATH>
 couchinator recreate --url <COUCHDB-OR-CLOUDANT-URL> --path <RESOURCE_PATH>
 ```
 
-
 **Note:** `RESOURCE_PATH` may be absolute path or a path relative to the current working directy
 
 ## Use the Library
 
 #### Basic Usage
 
-
 ```javascript
 const Couchinator = require('couchinator');
 
-const couchinator = new Couchinator('http://127.0.0.1:5984').resources('./fixtures');
+const couchinator = new Couchinator('http://127.0.0.1:5984').resources(
+  './fixtures'
+);
 
 // The following methods return promises
 couchinator.create();
@@ -84,7 +87,6 @@ Couchinator enables you to represent CouchDB and Cloudant database(s) using a si
 
 A couchinator filesystem data layout might look as such:
 
-
 ```shell
 users
     _design
@@ -102,100 +104,100 @@ classrooms
 
 Let's create a data layout to describe two databases **users** and **classrooms**
 
-1. **Create two folders, one for `users` and another for `classrooms`.**
+1.  **Create two folders, one for `users` and another for `classrooms`.**
 
-	```shell
-	users/
-	classrooms/
-	```
-	**Note:** Couchinator will use the folder name as the database name
+    ```shell
+    users/
+    classrooms/
+    ```
 
-2. **Within each folder _optionally_ create a `_design` folder to store any design documents**
+    **Note:** Couchinator will use the folder name as the database name
 
-	```shell
-	users/
-	    _design/
-	classrooms/
-	    _design/
-	```
+2.  **Within each folder _optionally_ create a `_design` folder to store any design documents**
 
-3. **Create design document(s) and store them in the appropriate `_design` folder**
+    ```shell
+    users/
+        _design/
+    classrooms/
+        _design/
+    ```
 
-   In the example below, we create two design documents in the `schools` database and one in the `users` database.
+3.  **Create design document(s) and store them in the appropriate `_design` folder**
 
-	```shell
-	users/
-	    _design/
-	        students.json
-	        teachers.json
-	classrooms/
-	    _design/
-	        classrooms.json
-	```
+    In the example below, we create two design documents in the `schools` database and one in the `users` database.
 
-	The contents of each design document `.json` must be a valid CouchDB [design document]([design document](http://docs.couchdb.org/en/2.0.0/json-structure.html#design-document)).
-	
-	For example, `students.json`:
-	
-   ```json
-   {
-     "_id": "_design/students",
-     "views": {
-       "byId": {
-         "map": "function (doc) {  if (doc.type === 'student') emit(doc._id, doc);}"
-       }
-     },
-     "language": "javascript"
-   }
-   ```
+        	```shell
+        	users/
+        	    _design/
+        	        students.json
+        	        teachers.json
+        	classrooms/
+        	    _design/
+        	        classrooms.json
+        	```
 
-4. **Create the data to store in each database**
+        	The contents of each design document `.json` must be a valid CouchDB [design document]([design document](http://docs.couchdb.org/en/2.0.0/json-structure.html#design-document)).
 
-	- Data must be stored using CouchDB's [bulk document](http://docs.couchdb.org/en/2.0.0/json-structure.html#bulk-documents) format
-	- The data may be stored in a _single_ JSON file or spread across _multiple_ JSON files (useful for organizing data)
+        	For example, `students.json`:
 
-	```shell
-	users/
-	    _design/
-	        students.json
-	        teachers.json
-	    students-docs.json   # contains student data
-	    teachers-docs.json   # contains teacher data
-	
-	classrooms/
-	    _design/
-	        classrooms.json
-	    users-docs.json
-	```
-	
+    ```json
+    {
+      "_id": "_design/students",
+      "views": {
+        "byId": {
+          "map": "function (doc) {  if (doc.type === 'student') emit(doc._id, doc);}"
+        }
+      },
+      "language": "javascript"
+    }
+    ```
 
-   For example, `student-docs.json` contains students
+4.  **Create the data to store in each database**
 
-   ```json
-   {
-     "docs": [
-       {
-         "_id": "sam895454857",
-         "name": "Sam C.",
-         "type": "student"
-       },
-       {
-         "_id": "josie895454856",
-         "name": "Josie D.",
-         "type": "student"
-       }
-     ]
-   }
-   ```
+    - Data must be stored using CouchDB's [bulk document](http://docs.couchdb.org/en/2.0.0/json-structure.html#bulk-documents) format
+    - The data may be stored in a _single_ JSON file or spread across _multiple_ JSON files (useful for organizing data)
+
+    ```shell
+    users/
+        _design/
+            students.json
+            teachers.json
+        students-docs.json   # contains student data
+        teachers-docs.json   # contains teacher data
+
+    classrooms/
+        _design/
+            classrooms.json
+        users-docs.json
+    ```
+
+For example, `student-docs.json` contains students
+
+```json
+{
+  "docs": [
+    {
+      "_id": "sam895454857",
+      "name": "Sam C.",
+      "type": "student"
+    },
+    {
+      "_id": "josie895454856",
+      "name": "Josie D.",
+      "type": "student"
+    }
+  ]
+}
+```
 
 5. **Run couchinator to create each database**
 
-	Assuming the data layout is stored in the folder `./fixtures`, run the following command(s):
-	
-	```shell
-	couchinator create --url http://127.0.0.1:5984 --path ./fixtures
-	```
-	
+   Assuming the data layout is stored in the folder `./fixtures`, run the following command(s):
+
+   ```shell
+   couchinator create --url http://127.0.0.1:5984 --path ./fixtures
+   ```
+
 ## Data Layout Example
 
 To view a complete data layout example, see [examples/db-resources](examples/db-resources).
@@ -207,7 +209,6 @@ To run the the example:
 - edit examples.js and set `<CLOUDANT-URL>` to your cloudant url
 - Run `node example`
 - Your database should now contain documents
-
 
 ## Library Initialization
 
