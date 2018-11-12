@@ -5,7 +5,7 @@
 <p align="left">
 <img align="left" src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="425"/>
 
-<br>Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).<br><br>Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
+<br><br>Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).<br><br>Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.<br><br><br>
 </p>
 
 ## Check it out
@@ -44,7 +44,7 @@ couchinator create --url <COUCHDB-OR-CLOUDANT-URL> --path <RESOURCE_PATH>
 #### Destroy
 
 ```shell
-couchinator destroy --url <COUCHDB-OR-CLOUDANT-URL> --path <RESOURCE_PATH>
+couchinator destroy --url <COUCHDB-OR-CLOUDANT-URL> --path <RESOURCE_PATH><br>
 ```
 
 #### Recreate
