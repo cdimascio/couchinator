@@ -233,7 +233,9 @@ const url = 'https://MYUSERNAME:MYPASSWORD@MYACCOUNT.cloudant.com';
 new Couchinator({ account: me, password: password });
 ```
 
-#### Advanced Usage
+### Advanced Usage
+
+The couchinator library enables a variety of customizations, including the ability to provide a custom visitor to configure exactly what log information is output.
 
 ```javascript
 const Generator = require('couchinator');
