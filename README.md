@@ -140,7 +140,7 @@ Let's create a data layout to describe two databases **users** and **classrooms*
             classrooms.json
     ```
 
-    The contents of each design document `.json` must be a valid CouchDB [design document]([design document](http://docs.couchdb.org/en/2.0.0/json-structure.html#design-document)).
+    The contents of each design document `.json` must be a valid CouchDB [design document](http://docs.couchdb.org/en/2.0.0/json-structure.html#design-document).
 
     For example, `students.json`:
 
