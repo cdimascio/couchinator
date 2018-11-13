@@ -158,8 +158,8 @@ Let's create a data layout to describe two databases **users** and **classrooms*
 
 4.  **Create the data to store in each database**
 
-    - Data must be stored using CouchDB's [bulk document](http://docs.couchdb.org/en/2.0.0/json-structure.html#bulk-documents) format
-    - The data may be stored in a _single_ JSON file or spread across _multiple_ JSON files (useful for organizing data)
+    - Data must be represented using CouchDB's [bulk document](http://docs.couchdb.org/en/2.0.0/json-structure.html#bulk-documents) format
+    - The data may be represented in a _single_ JSON file or spread across _multiple_ JSON files (useful for organizing data)
 
     ```shell
     users/
@@ -175,24 +175,24 @@ Let's create a data layout to describe two databases **users** and **classrooms*
         users-docs.json
     ```
 
-For example, `student-docs.json` contains students
+    For example, `student-docs.json` contains students
 
-```json
-{
-  "docs": [
+    ```json
     {
-      "_id": "sam895454857",
-      "name": "Sam C.",
-      "type": "student"
-    },
-    {
-      "_id": "josie895454856",
-      "name": "Josie D.",
-      "type": "student"
+      "docs": [
+        {
+           "_id": "sam895454857",
+           "name": "Sam C.",
+           "type": "student"
+         },
+         {
+           "_id": "josie895454856",
+           "name": "Josie D.",
+           "type": "student"
+         }
+       ]
     }
-  ]
-}
-```
+    ```
 
 5. **Run couchinator to create each database**
 
