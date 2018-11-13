@@ -8,7 +8,7 @@ Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://ww
 	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="650"/>
 </p>
 
-Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit testing and more. couchinator is both a library and a command line utility.
+Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit/integration testing and more. couchinator is both a library and a command line utility.
 
 ## See it in action
 
