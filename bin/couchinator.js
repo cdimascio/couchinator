@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const path = require('path');
-const Generator = require('../lib');
+const Couchinator = require('../lib');
 const package = require('../package.json');
 const DEFAULT_PATH = 'cloudant-database';
 
@@ -59,24 +59,30 @@ function main(opts) {
       }
     }
   };
-  const generator = new Generator(url, visitor);
+  const couchinator = new Couchinator(url);
 
   switch (command) {
     case 'create':
-      generator
+      couchinator
         .resources(rpath)
+        .visitor(visitor)
+        .configure()
         .create(allDocs)
         .catch(e => process.exit(2));
       break;
     case 'destroy':
-      generator
+      couchinator
         .resources(rpath)
+        .visitor(visitor)
+        .configure()
         .destroy()
         .catch(e => process.exit(2));
       break;
     case 'recreate':
-      generator
+      couchinator
         .resources(rpath)
+        .visitor(visitor)
+        .configure()
         .recreate(allDocs)
         .catch(e => process.exit(2));
       break;

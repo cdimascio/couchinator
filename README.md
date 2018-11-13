@@ -235,19 +235,15 @@ new Couchinator({ account: me, password: password });
 const Generator = require('couchinator');
 const path = require('path');
 
-// Create a custom progress visitor
-const progressVisitor = e => {
-  if (e.level >= 30) console.log(e.msg);
-};
+// Define the directory that contains our db resources
+const resourcePath = path.join(process.cwd(), 'db-resources');
 
-// Define the cloudant url
-// You may use an alternate initialization object (see initialization section)
-const url = '<CLOUDANT-URL>';
-
-// Define the directory that contains our db assets e.g. ./db-resources
-const assetPath = path.join(process.cwd(), 'db-resources');
-
-new Generator(url, progressVisitor).resources(assetPath).create(); // or destroy
+const c = new Couchinator('<YOUR-DB-URL>')
+  .resources(resourcePath)
+  .visitor(e => {
+  		if (e.level >= 30) console.log(e.msg);
+	})
+  .configure();
 ```
 
 ## Apis
