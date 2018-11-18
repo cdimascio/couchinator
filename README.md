@@ -28,7 +28,7 @@ npm install couchinator
 
 Global installation is convenient when using the **CLI**
 
-```
+```shell
 npm install couchinator -g
 ```
 
