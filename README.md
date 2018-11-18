@@ -71,7 +71,7 @@ const couchinator = new Couchinator('http://127.0.0.1:5984').resources(
   './fixtures'
 );
 
-// The following methods return promises
+// Each of the following methods return a promise
 couchinator.create();
 couchinator.recreate();
 couchinator.destroy();
