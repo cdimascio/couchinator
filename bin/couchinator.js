@@ -18,6 +18,7 @@ program.command('recreate').action(cmd => (command = 'recreate'));
 program
   .option('-u --url <url>', 'couchdb url')
   .option('-p --path <path>', 'resource path. Default ./' + DEFAULT_PATH)
+  .option('-x --prefix <prefix>', 'db name prefix')
   .option('-b --verbose', 'verbose logs', false)
   .option(
     '-d --ddocsonly',
@@ -39,13 +40,15 @@ main({
   command,
   url: program.url,
   path: rpath,
-  allDocs: !program.designonly,
+  prefix: program.prefix,
+  allDocs: !program.ddocsonly,
   verbose: program.verbose,
 });
 
 function main(opts) {
   const command = opts.command;
   const url = opts.url;
+  const prefix = opts.prefix;
   const rpath = opts.path;
   const allDocs = opts.allDocs;
 
@@ -64,24 +67,27 @@ function main(opts) {
   switch (command) {
     case 'create':
       couchinator
-        .resources(rpath)
-        .visitor(visitor)
+        .resources(rpath, true)
+        .visitor(visitor, true)
+        .prefix(prefix, true)
         .configure()
         .create(allDocs)
         .catch(e => process.exit(2));
       break;
     case 'destroy':
       couchinator
-        .resources(rpath)
-        .visitor(visitor)
+        .resources(rpath, true)
+        .visitor(visitor, true)
+        .prefix(prefix, true)
         .configure()
         .destroy()
         .catch(e => process.exit(2));
       break;
     case 'recreate':
       couchinator
-        .resources(rpath)
-        .visitor(visitor)
+        .resources(rpath, true)
+        .visitor(visitor, true)
+        .prefix(prefix, true)
         .configure()
         .recreate(allDocs)
         .catch(e => process.exit(2));
