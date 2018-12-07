@@ -4,7 +4,7 @@ const program = require('commander');
 const path = require('path');
 const Couchinator = require('../lib');
 const package = require('../package.json');
-const DEFAULT_PATH = 'cloudant-database';
+const DEFAULT_PATH = 'fixtures';
 
 let command;
 program.version(package.version);

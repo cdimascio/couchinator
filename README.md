@@ -289,7 +289,7 @@ Currently, the CLI only support a Cloudant URL.
     -h, --help        output usage information
     -V, --version     output the version number
     -u --url <url>    couchdb url
-    -p --path <path>  resource path. Default ./cloudant-database
+    -p --path <path>  resource path. Default ./fixtures
     -b --verbose      verbose logs
     -d --ddocsonly    import design docs only. Do no import other docs
 ```
