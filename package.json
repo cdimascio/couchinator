@@ -1,6 +1,6 @@
 {
   "name": "couchinator",
-  "version": "0.30.1",
+  "version": "0.30.2",
   "description": "Fixtures for Cloudant: Create and destroy cloudant databases with ease",
   "main": "lib/index.js",
   "author": "Carmine M DiMascio",
