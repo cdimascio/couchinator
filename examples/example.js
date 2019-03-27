@@ -15,6 +15,8 @@ const assetPath = path.join(process.cwd(), 'db-resources');
 const c = new Couchinator(url)
   .resources(assetPath)
   .visitor(visitor)
+  // .prefix('pre_')
+  // .suffix('_suf')
   .configure();
 
 c.create();

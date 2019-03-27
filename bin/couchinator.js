@@ -19,6 +19,7 @@ program
   .option('-u --url <url>', 'couchdb url')
   .option('-p --path <path>', 'resource path. Default ./' + DEFAULT_PATH)
   .option('-x --prefix <prefix>', 'db name prefix')
+  .option('-s --suffix <suffix>', 'db name suffix')
   .option('-b --verbose', 'verbose logs', false)
   .option(
     '-d --ddocsonly',
@@ -41,6 +42,7 @@ main({
   url: program.url,
   path: rpath,
   prefix: program.prefix,
+  suffix: program.suffix,
   allDocs: !program.ddocsonly,
   verbose: program.verbose,
 });
@@ -49,6 +51,7 @@ function main(opts) {
   const command = opts.command;
   const url = opts.url;
   const prefix = opts.prefix;
+  const suffix = opts.suffix;
   const rpath = opts.path;
   const allDocs = opts.allDocs;
 
@@ -70,6 +73,7 @@ function main(opts) {
         .resources(rpath, true)
         .visitor(visitor, true)
         .prefix(prefix, true)
+        .suffix(suffix, true)
         .configure()
         .create(allDocs)
         .catch(e => process.exit(2));
@@ -79,6 +83,7 @@ function main(opts) {
         .resources(rpath, true)
         .visitor(visitor, true)
         .prefix(prefix, true)
+        .suffix(suffix, true)
         .configure()
         .destroy()
         .catch(e => process.exit(2));
@@ -88,6 +93,7 @@ function main(opts) {
         .resources(rpath, true)
         .visitor(visitor, true)
         .prefix(prefix, true)
+        .suffix(suffix, true)
         .configure()
         .recreate(allDocs)
         .catch(e => process.exit(2));
