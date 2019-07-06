@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/npm/v/couchinator.svg) ![](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 
-🛋️ Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).
+Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).
 
 <p align="center">
 	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="650"/>
