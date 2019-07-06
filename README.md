@@ -2,13 +2,13 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/npm/v/couchinator.svg) ![](https://img.shields.io/badge/license-Apache2.0-blue.svg)
 
-Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).
+🛋️ Fixtures for [CouchDB](http://couchdb.apache.org/) and [IBM Cloudant](https://www.ibm.com/cloud/cloudant).
 
 <p align="center">
 	<img src="https://github.com/cdimascio/couchinator/raw/master/assets/couchinator.png" width="650"/>
 </p>
 
-Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit/integration testing and more. couchinator is both a library and a command line utility.
+Setup and teardown CouchDB and IBM Cloudant databases with ease. **couchinator** is a great tool for unit/integration testing and more. couchinator is both a library and a command line utility. 
 
 ## See it in action
 
